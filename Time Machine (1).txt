@@ -1,0 +1,12 @@
+h = 10
+m = 30
+extra_m = 10
+
+# Bereken totaal aantal minuten vanaf 00:00
+totaal_minuten = (h * 60) + m + extra_m
+
+# Reken terug naar uren en minuten
+nieuwe_uren = (totaal_minuten // 60) % 24  # % 24 zorgt dat 25:00 weer 01:00 wordt
+nieuwe_minuten = totaal_minuten % 60
+
+print(f"De nieuwe tijd is {nieuwe_uren:02d}:{nieuwe_minuten:02d}")
